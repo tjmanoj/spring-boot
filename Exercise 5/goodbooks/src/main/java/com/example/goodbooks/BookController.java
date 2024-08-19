@@ -1,5 +1,6 @@
 package com.example.goodbooks;
 
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,15 +15,22 @@ import java.util.ArrayList;
 public class BookController {
     BookService service = new BookService();
     @GetMapping("/books")
-    public ArrayList<Book> getAllBooks() {
-        return service.getBooks();
+    public ArrayList<Book> getAllBooks(@RequestParam(value = "id", required = false) Integer id) {
+        if(id == null){
+            return service.getBooks();
+        }
+        else{
+            Book book = service.getBookById(id);
+            ArrayList<Book> books = new ArrayList<Book>();
+            books.add(book);
+            return books;
+        }
     }
 
     @GetMapping("/books/{bookId}")
     public Book getBookById(@PathVariable int bookId) {
         return service.getBookById(bookId);
     }
-
     @PostMapping("/books")
     public Book addBook(@RequestBody Book book) {
         return service.addBook(book);
