@@ -26,6 +26,13 @@ public class BookH2Service implements BookRepository {
     }
 
     @Override
+    public ArrayList<Book> getBooksByName(String name) {
+        List<Book> bookList = db.query("SELECT * from book where name like ?", new BookRowMapper(), name + "%");
+        ArrayList<Book> books = new ArrayList<>(bookList);
+        return books;
+    }
+
+    @Override
     public Book getBookById(int bookId) {
         try {
             Book book = db.queryForObject("SELECT * from book where id = ?", new BookRowMapper(), bookId);

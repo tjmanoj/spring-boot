@@ -7,6 +7,8 @@ import com.example.goodreads.model.Book;
 public interface BookRepository {
     ArrayList<Book> getBooks();
 
+    ArrayList<Book> getBooksByName(String name);
+
     Book getBookById(int bookId);
 
     Book addBook(Book book);

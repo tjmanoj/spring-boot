@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.goodreads.model.Book;
 import com.example.goodreads.service.BookH2Service;
@@ -20,8 +21,13 @@ class BookController {
     public BookH2Service bookService;
 
     @GetMapping("/books")
-    public ArrayList<Book> getBooks() {
-        return bookService.getBooks();
+    public ArrayList<Book> getBooks(@RequestParam(value = "name",required = false) String name) {
+        if(name == null){
+            return bookService.getBooks();
+        }
+        else{
+            return bookService.getBooksByName(name);
+        }
     }
 
     @GetMapping("/books/{bookId}")

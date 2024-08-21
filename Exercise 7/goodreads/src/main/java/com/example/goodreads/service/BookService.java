@@ -1,8 +1,10 @@
+// this file is for temporary without using h2 database.
 package com.example.goodreads.service;
 
 import java.util.*;
 
 import com.example.goodreads.model.Book;
+import com.example.goodreads.model.BookRowMapper;
 import com.example.goodreads.repository.BookRepository;
 
 import org.springframework.web.server.ResponseStatusException;
@@ -25,6 +27,13 @@ public class BookService implements BookRepository {
         ArrayList<Book> books = new ArrayList<>(bookCollection);
         return books;
 
+    }
+
+    @Override
+    public ArrayList<Book> getBooksByName(String name) {
+        Collection<Book> bookCollection = hmap.values();
+        ArrayList<Book> books = new ArrayList<>(bookCollection);
+        return books;
     }
 
     @Override
