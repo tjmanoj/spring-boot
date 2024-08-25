@@ -1,0 +1,1 @@
+Cricket team API without database connection. Just a simple crud application for practice.
