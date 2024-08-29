@@ -1,6 +1,6 @@
-2024-08-29 10:33:23 jdbc[3]: exception
+2024-08-29 14:48:18 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SONDID" not found; SQL statement:
-Update playlist set songName = ? where sondId = ? [42122-214]
+Update PLAYLIST set songName = ? where sondId = ? [42122-214]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
 	at org.h2.message.DbException.get(DbException.java:223)
@@ -25,7 +25,7 @@ Update playlist set songName = ? where sondId = ? [42122-214]
 	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960)
 	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1015)
 	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1025)
-	at com.example.song.service.SongH2Service.updateSongById(SongH2Service.java:47)
+	at com.example.song.service.SongH2Service.updateSongById(SongH2Service.java:46)
 	at com.example.song.controller.SongController.updateSongById(SongController.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -77,9 +77,9 @@ Update playlist set songName = ? where sondId = ? [42122-214]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:750)
-2024-08-29 10:33:44 jdbc[3]: exception
+2024-08-29 14:51:15 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SONDID" not found; SQL statement:
-Update playlist set songName = ? where sondId = ? [42122-214]
+Update PLAYLIST set songName = ? where sondId = ? [42122-214]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
 	at org.h2.message.DbException.get(DbException.java:223)
@@ -104,7 +104,7 @@ Update playlist set songName = ? where sondId = ? [42122-214]
 	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960)
 	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1015)
 	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1025)
-	at com.example.song.service.SongH2Service.updateSongById(SongH2Service.java:47)
+	at com.example.song.service.SongH2Service.updateSongById(SongH2Service.java:46)
 	at com.example.song.controller.SongController.updateSongById(SongController.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -156,9 +156,9 @@ Update playlist set songName = ? where sondId = ? [42122-214]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:750)
-2024-08-29 10:35:31 jdbc[3]: exception
+2024-08-29 14:54:17 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SONDID" not found; SQL statement:
-Update playlist set songName = ? where sondId = ? [42122-214]
+Update PLAYLIST set songName = ? where sondId = ? [42122-214]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
 	at org.h2.message.DbException.get(DbException.java:223)
@@ -183,7 +183,7 @@ Update playlist set songName = ? where sondId = ? [42122-214]
 	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960)
 	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1015)
 	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1025)
-	at com.example.song.service.SongH2Service.updateSongById(SongH2Service.java:47)
+	at com.example.song.service.SongH2Service.updateSongById(SongH2Service.java:46)
 	at com.example.song.controller.SongController.updateSongById(SongController.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
